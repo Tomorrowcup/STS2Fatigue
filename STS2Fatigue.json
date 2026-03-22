@@ -1,0 +1,11 @@
+{
+    "id": "STS2Fatigue",
+    "name": "STS2 Fatigue",
+    "author": "Tomorrowcup",
+    "description": "杀戮尖塔2疲劳模式：当回合中抽牌堆为空时，抽牌将消耗生命值，而不是洗混弃牌堆。第 n 张抽牌会消耗 n 点生命值。回合结束时，如果抽牌堆为空，弃牌堆将被重新洗回。When draw pile is empty during a turn, drawing cards will cost HP instead of shuffling discard pile. The nth draw costs n HP. At end of turn, if draw pile is empty, discard pile is shuffled back.",
+    "version": "1.0.0",
+    "has_dll": true,
+    "has_pck": false,
+    "dependencies": [],
+    "affects_gameplay": true
+}
