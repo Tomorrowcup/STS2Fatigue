@@ -5,8 +5,44 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <LangVersion>13.0</LangVersion>
+
+    <!-- 禁用自动包含，手动指定所有编译文件 -->
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+    <EnableDefaultNoneItems>false</EnableDefaultNoneItems>
+
+    <!-- 确定性编译配置 -->
+    <Deterministic>true</Deterministic>
+    <SourceRevisionId>1.0.0</SourceRevisionId>
+    <PathMap>$(MSBuildProjectDirectory)=.</PathMap>
+    <DeterministicSourcePaths>true</DeterministicSourcePaths>
+
+    <!-- 禁用所有源码控制信息嵌入 -->
+    <IncludeSourceRevision>false</IncludeSourceRevision>
+    <SourceControlInformationFeatureSupported>false</SourceControlInformationFeatureSupported>
+
+    <!-- 禁用 SourceLink -->
+    <EnableSourceLink>false</EnableSourceLink>
+    <SourceControlInformation>false</SourceControlInformation>
+
+    <!-- 禁用符号包 -->
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <IncludeSymbols>false</IncludeSymbols>
+
+    <!-- 禁用 NuGet 包信息 -->
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageOutputPath>ignore</PackageOutputPath>
+
+    <!-- 禁用程序集版本自动生成 -->
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
   </PropertyGroup>
 
+  <!-- 手动指定所有编译文件 -->
+  <ItemGroup>
+    <Compile Include="FatiguePatches.cs" />
+  </ItemGroup>
+
+  <!-- 手动指定引用 -->
   <ItemGroup>
     <Reference Include="sts2">
       <HintPath>dlls\sts2.dll</HintPath>
